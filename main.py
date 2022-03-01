@@ -1,78 +1,155 @@
 # https://programmers.co.kr/learn/courses/30/lessons/60061
 # 2020 KAKAO BLUND RECRUITMENT, 기둥과 보 설치
 
-# 거의 다 접근하였지만, 삭제 가능 여부를 확인하는 과정에서 문제가 발생하였다.
-# 삭제가 영향을 미치는 건축물 위치의 건축물에 대한 유효성을 확인하는데, 해당 위치에 건출물이 존재하는 경우에만 유효성을 확인해야하는데 존재 여부를 확인 부분을 빠드렸다.
+from collections import deque
+import heapq
 
-# 본 풀이에서는 시간을 단축하기 위해, 건설과 삭제를 확인하는 부분에서 복잡한 조건을 달았다.
-# 하지만, 총 명령의 갯수가 1000개 이하 / 시간 제한 5초 이므로 O(N^3) 까지도 커버 가능하므로, 명령을 수행할때마다 모든 건축물의 유효성을 확인하는 방법을 사용하면
-# 더 깔끔하게 코드를 짤수도 있다.
-# => pr60061_solution.py
+INF = int(1e9)
 
-import sys; input = sys.stdin.readline
+def dfs(graph, v, visited):
+    # graph, a에서 갈 수 있는 인접 노드들, 인접 행렬
+    visitied[v] = True
+    for node in graph[v]:
+        if not visited[node]:
+            dfs(graph, node, visited)
 
-def isPossibleRemove(x, y, a):
-    if a == 0:
-        if ([x, y+1, 0] in map and not isPossibleWall(x, y + 1)) or \
-                ([x-1, y+1, 1] in map and not isPossibleFloor(x - 1, y + 1)) or \
-                ([x, y+1, 1] in map and not isPossibleFloor(x, y + 1)):
-            return False
+def bfs(n):
+    # graph, a에서 갈 수 있는 인접 노드들, 인접 행렬
+    visited = [False] * (n+1)
+    queue = deque([start])
+    visited[start] = True
 
-    elif a == 1:
-        if ([x-1, y, 1] in map and not isPossibleFloor(x - 1, y)) or \
-                ([x+1, y, 1] in map and not isPossibleFloor(x + 1, y)) or \
-                ([x, y, 0] in map and not isPossibleWall(x, y)) or \
-                ([x+1, y, 0] in map and not isPossibleWall(x + 1, y)):
-            return False
+    while queue:
+        now = queue.popleft()
+        for node in graph[now]:
+            if not visited[node]:
+                queue.append(node)
+                visited[node] = True
 
-    return True
+def dijkstra(start):
+    # graph, a에서 갈 수 있는 인접 노드들, 인접 행렬
+    distance = [INF] * (n+1)
+
+    q = [(start, 0)]
+    while q:
+        now, dist = heapq.heappop()
+        if distance[now] < dist:
+            continue
+
+        for node in graph[now]:
+            cost = distance[now] + node[1]
+            if distance[node[0]] > cost:
+                distance[node[0]] = cost
+                heapq.heappush(q, (node[0], cost))
 
 
-def isPossibleWall(x, y):
-    if y == 0:
-        return True
+def floyd():
+    # graph, a to b의 가중치, 2d arr
+    for k in range(1, n+1):
+        for a in range(1, n+1):
+            for b in range(1, n+1):
+                graph[a][b] = min(graph[a][b], graph[a][k] + graph[k][b])
 
-    if [x, y - 1, 0] in map:
-        return True
 
-    if [x - 1, y, 1] in map:
-        return True
+def bellman(start):
+    # edges, (a, b, val), 1d arr
+    for i in range(v):
+        for j in range(e):
+            a, b, c = edges[j]
 
-    if [x, y, 1] in map:
-        return True
-
+            if distance[b] > distance[a] + c:
+                distance[b] = distance[a] + c
+                if i == v - 1:
+                    return True
     return False
 
-def isPossibleFloor(x, y):
-    if [x, y - 1, 0] in map:
-        return True
+import sys; import sys; sys.setrecursionlimit(10 ** 6); input = sys.stdin.readline().rstrip
 
-    if [x + 1, y - 1, 0] in map:
-        return True
-
-    if [x - 1, y, 1] in map and [x + 1, y, 1] in map:
-        return True
-
-    return False
-
-def solution(n, build_frame):
-    global map
-    map = []
-
-    for task in build_frame:
-        x, y, a, b = task
-        if b == 0:
-            map.remove([x, y, a])
-            if not isPossibleRemove(x, y, a):
-                map.append([x, y, a])
-
-        elif a == 0 and isPossibleWall(x, y):
-            map.append([x, y, a])
-        elif a == 1 and isPossibleFloor(x, y):
-            map.append([x, y, a])
+dr = [-1, 0, 1, 0]
+dc = [0, 1, 0, -1]
 
 
-    map.sort()
-    return map
+def rotateR(idx):
+    idx += 1
+    if idx == 4:
+        idx = 0
+    return idx
 
-print(solution(5, [[0,0,0,1],[2,0,0,1],[4,0,0,1],[0,1,1,1],[1,1,1,1],[2,1,1,1],[3,1,1,1],[2,0,0,0],[1,1,1,0],[2,2,0,1]]))
+
+def rotateL(idx):
+    idx -= 1
+    if idx == -1:
+        idx = 3
+    return idx
+
+
+def get_cycle(grid, i, j, rotation):
+    currentCycle = []
+    length = 0
+    while True:
+        if grid[i][j] == "R":
+            rotation = rotateR(rotation)
+        elif grid[i][j] == "L":
+            rotation = rotateL(rotation)
+
+        ni = i + dr[rotation]
+        nj = j + dc[rotation]
+        now = [(i, j), (ni, nj)]
+        if now in currentCycle:
+            return [length, currentCycle]
+
+        if ni >= r:
+            currentCycle.append(now)
+            now = [(-1, nj), (0, nj)]
+            i = 0
+            j = nj
+        elif ni < 0:
+            currentCycle.append(now)
+            now = [(r, nj), (r - 1, nj)]
+            i = r - 1
+            j = nj
+
+        elif nj >= c:
+            currentCycle.append(now)
+            now = [(ni, -1), (ni, 0)]
+            i = ni
+            j = 0
+        elif nj < 0:
+            currentCycle.append(now)
+            now = [(ni, c), (ni, c - 1)]
+            i = ni
+            j = c - 1
+        else:
+            i = ni
+            j = nj
+
+        currentCycle.append(now)
+        length += 1
+
+
+def solution(grid):
+    global answer, cycle, r, c
+    answer = []
+    cycles = []
+    r = len(grid)
+    c = len(grid[0])
+    for i in range(r):
+        for j in range(c):
+            for rotation in range(4):
+                length, new_cycle = get_cycle(grid, i, j, rotation)
+                new_cycle.sort()
+
+                duplicated = False
+                for cycle in cycles:
+                    if new_cycle[0] == cycle[0]:
+                        duplicated = True
+                        break
+                if not duplicated:
+                    answer.append(length)
+                    cycles.append(new_cycle)
+
+    answer.sort()
+    return answer
+
+# print('10'.replace('0', ''))
+print(solution(["SL","LR"]))
