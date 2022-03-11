@@ -10,3 +10,4 @@
 |DP 문제처럼 보여도 그리디로 풀 수 있는 문제는?|[택배](./sol_from_BOJ/greedy/boj8980.py)|
 |배열을 90도 회전시키기|[자물쇠와 열쇠](./sol_from_Programmers/kakao_blind/pr60059.py)|
 |원소 변경이 잦은 배열의 중앙값 찾기 : MaxHeap, MinHeap 응용|[중앙값 구하기](./sol_from_BOJ/data_structure/boj2696.py)|
+|투포인터로 부분합 구하기|[부분합](./sol_from_BOJ/two_pointer/boj1806.py)|
