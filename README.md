@@ -11,3 +11,4 @@
 |배열을 90도 회전시키기|[자물쇠와 열쇠](./sol_from_Programmers/kakao_blind/pr60059.py)|
 |원소 변경이 잦은 배열의 중앙값 찾기 : MaxHeap, MinHeap 응용|[중앙값 구하기](./sol_from_BOJ/data_structure/boj2696.py)|
 |투포인터로 부분합 구하기|[부분합](./sol_from_BOJ/two_pointer/boj1806.py)|
+|itertools.combinations 활용해서 감소하는 수 만들기 : 조합은 주어진 배열 순서대로|[감소하는 수](./sol_from_BOJ/ps/boj1038.py)|
