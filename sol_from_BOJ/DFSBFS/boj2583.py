@@ -62,36 +62,3 @@ def solution():
     print(" ".join(map(str, areas)))
 
 solution()
-
-# def dij(start):
-#     distance = [INF] * (n+1)
-#
-#     q = [(0, start)]
-#     while q:
-#         dist, now = heapq.heappop(q)
-#         if distance[now] < dist:
-#             continue
-#
-#         for node in graph[now]:
-#             cost = distance[now] + node[1]
-#             if distance[node[0]] > cost:
-#                 distance[node[0]] = cost
-#                 heapq.heappush(q, (cost, node[0]))
-#
-# def floyd():
-#     for k in range(1, n+1):
-#         for a in range(1, n+1):
-#             for b in range(1, n+1):
-#                 graph[a][b] = min(graph[a][b], graph[a][k] + graph[k][b])
-#
-# def bellman(start):
-#     distance[start] = 0
-#     for i in range(v):
-#         for j in range(e):
-#             a, b, c = edges[j]
-#
-#             if distance[b] > distance[a] + c:
-#                 distance[b] = distance[a] + c
-#                 if i == v - 1:
-#                     return False
-#     return True

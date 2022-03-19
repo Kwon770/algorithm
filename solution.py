@@ -29,7 +29,7 @@ def dijkstra(start):
 
     q = [(start, 0)]
     while q:
-        now, dist = heapq.heappop()
+        now, dist = heapq.heappop(q)
         if distance[now] < dist:
             continue
 
@@ -57,5 +57,5 @@ def bellman(start):
             if distance[b] > distance[a] + c:
                 distance[b] = distance[a] + c
                 if i == v - 1:
-                    return True
-    return False
+                    return False # 사이클
+    return True
