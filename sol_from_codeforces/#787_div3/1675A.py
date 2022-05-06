@@ -1,4 +1,8 @@
 # https://codeforces.com/contest/1675/problem/A
+# 1675 A - Food for Animals
+# Memory : 11000 KB / Time : 187 ms
+
+# 단순 연산 문제다.
 
 import sys; readline = sys.stdin.readline
 
