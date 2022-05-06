@@ -1,6 +1,13 @@
-# https://www.acmicpc.net/problem/2583
-# 2583 영역 구하기
-# Memory : 32412 KB / Time : 104 ms
+# https://codeforces.com/problemset/problem/1675/C
+# 1675 C - Detective Task
+# Memory : 9700 KB / Time : 280 ms
+
+# 단순 구현 문제였는데, 영어 독해 실패로 문제를 제대로 이해하지 못했다.
+# He asks you to find out the number of those who can be considered a thief according to the answers.
+# 도둑으로 ""고려될 수 있는"" 사람의 수를 구하는 것인데, 최소 용의자의 수라고 착각해서 문제를 파악하지 못했다.
+
+# 문제를 이해한다면, 테케에 1만 있는 경우 / 0만 있는 경우 / 모두 있는 경우 / 모두 없는 경우로 분류해서 판별하고
+# 마지막 1의 위치, 첫 0의 위치를 통해 분류별로 답을 출력하면 된다.
 
 import sys; readline = sys.stdin.readline
 
