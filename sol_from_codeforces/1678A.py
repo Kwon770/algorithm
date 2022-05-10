@@ -1,6 +1,9 @@
-# https://www.acmicpc.net/problem/2583
-# 2583 영역 구하기
-# Memory : 32412 KB / Time : 104 ms
+# https://codeforces.com/contest/1678/problem/A?f0a28=1
+# A. Tokitsukaze and All Zero Sequnce
+# Memory : 5700 KB / Time : 109 ms
+
+# 연산을 통해 모두 0을 만드는 과정의 본질을 알아차리면 간단하게 해결된다.
+# 다양한 테케들도 결과적으로는 유사한 과정을 거친다.
 
 import sys; readline = sys.stdin.readline
 
