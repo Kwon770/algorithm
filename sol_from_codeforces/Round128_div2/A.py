@@ -1,6 +1,6 @@
-# https://www.acmicpc.net/problem/2583
-# 2583 영역 구하기
-# Memory : 32412 KB / Time : 104 ms
+# https://codeforces.com/contest/1680/problem/A
+# A - Minimums and Maximums
+# Memory : 9900 KB / Time : 140 ms
 
 import sys; readline = sys.stdin.readline
 
