@@ -1,5 +1,5 @@
 # https://www.acmicpc.net/problem/17300
-# 17300 패턴
+# 172300 패턴
 # Memory : 30840 KB / Time : 68 ms
 
 # 적합한 패턴의 규칙의 핵심을 파악하고 구현력을 발휘하는게 핵심
