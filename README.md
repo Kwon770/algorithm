@@ -11,6 +11,7 @@
 |DP 문제처럼 보여도 그리디로 풀 수 있는 문제는?|[택배](./sol_from_BOJ/greedy/boj8980.py)|
 |배열을 90도 회전시키기|[자물쇠와 열쇠](./sol_from_Programmers/kakao_blind/pr60059.py)|
 |원소 변경이 잦은 배열의 중앙값 찾기 : MaxHeap, MinHeap 응용|[중앙값 구하기](./sol_from_BOJ/data_structure/boj2696.py)|
+|투포인터를 써야한다는 것을 눈치채야하는 문제|[Longest Strike](./sol_from_codeforces/#790_div4/1676F.py)|
 |투포인터로 부분합 구하기|[부분합](./sol_from_BOJ/two_pointer/boj1806.py)|
 |itertools.combinations 활용해서 감소하는 수 만들기 : 조합은 주어진 배열 순서대로|[감소하는 수](./sol_from_BOJ/ps/boj1038.py)|
 |좌표 기준이 칸인지 점인지 주의하기|[영역 구하기](./sol_from_BOJ/DFSBFS/boj2583.py)|
