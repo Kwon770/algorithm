@@ -19,6 +19,8 @@
 |itertools.combinations 활용해서 감소하는 수 만들기 : 조합은 주어진 배열 순서대로|[감소하는 수](./sol_from_BOJ/ps/boj1038.py)|
 |이진 탐색 응용 (범위 내의 원소 갯수 구하기, 문자열의 일정 범위 검색)|[가사 검색](./sol_from_Programmers/kakao_blind/pr60060.py)|
 |원소 변경이 잦은 배열의 중앙값 찾기 : MaxHeap, MinHeap 응용|[중앙값 구하기](./sol_from_BOJ/data_structure/boj2696.py)|
+|프로그래밍적인 풀이가 오하려 복잡할 때는 파이써닉하게 짜보자1 (조건비교, 패턴)|[TicTaeToe](./sol_from_BOJ/ps/boj13227.py)|
+|파이써닉하게 짜보자2 (문자열, 슬라이싱, 리스트)|[TicTaeToe](./sol_from_BOJ/ps/boj13227.py)|
 |  ||
 | **Simulation** ||
 |배열을 90도 회전시키기|[자물쇠와 열쇠](./sol_from_Programmers/kakao_blind/pr60059.py)|
