@@ -5,6 +5,11 @@
 그래프 탐색의 최적화하려다가 엣지케이스에 걸리는 경우를 조심하자 => 쓸데없이 최적화하지말고 푸는 것에 집중하자 ([puyopuyo](http://noj.am/11559))
 
 
+<br/>
+<br/>
+
+---
+
 # 📚 문제 아카이브
 
 |note|link|
@@ -17,9 +22,11 @@
 |DP 문제처럼 보여도 그리디로 풀 수 있는 문제는?|[택배](./sol_from_BOJ/greedy/boj8980.py)|
 |DP 문제처럼 보여도 메모리가 모자라다면 타개법을 찾아야하는 문제는?|[신기한 소수](./sol_from_BOJ/ps/boj2023.py)|
 |  ||
+|  ||
 | **Two Pointer** ||
 |투포인터를 써야한다는 것을 눈치채야하는 문제|[Longest Strike](./sol_from_codeforces/#790_div4/1676F.py)|
 |투포인터로 부분합 구하기|[부분합](./sol_from_BOJ/two_pointer/boj1806.py)|
+|  ||
 |  ||
 | **PS** ||
 |원소가 두 개인 튜플 탐색|[뱀](./sol_from_BOJ/simulation/boj3190.py)|
@@ -29,6 +36,7 @@
 |원소 변경이 잦은 배열의 중앙값 찾기 : MaxHeap, MinHeap 응용|[중앙값 구하기](./sol_from_BOJ/data_structure/boj2696.py)|
 |프로그래밍적인 풀이가 오하려 복잡할 때는 파이써닉하게 짜보자1 (조건비교, 패턴)|[TicTaeToe](./sol_from_BOJ/ps/boj13227.py)|
 |파이써닉하게 짜보자2 (문자열, 슬라이싱, 리스트)|[TicTaeToe](./sol_from_BOJ/ps/boj13227.py)|
+|  ||
 |  ||
 | **Simulation** ||
 |배열을 90도 회전시키기|[자물쇠와 열쇠](./sol_from_Programmers/kakao_blind/pr60059.py)|
