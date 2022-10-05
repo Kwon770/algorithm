@@ -1,77 +1,62 @@
-# https://www.acmicpc.net/problem/11559
-# 13549 숨바꼭질 3
-# Memory : 50136 KB / Time : 672 ms
+# https://www.acmicpc.net/problem/1448
+# 1448 삼각형 만들기
+# Memory : 73656 KB / Time : 780 ms
 
-# 처음에 BFS를 사용했지만, 방문 검사를 빠드려서 TLE가 떠서, DP로 해결했었다. 쓸데없이 빙 둘러갔다.
-
-# 계산은 불가한 문제 -> 탐색해야 함
-# 1. BFS
-# 1-1. priorityQueue BFS : 최단시간 경우를 먼저 BFS 탐색
-# 1-2. 0-1 BFS : 가중치가 0과 1뿐인경우로, 0이면 front 1이면 back에 넣는 탐색
-# 2. 다익스트라
-
-# 1, 2번 모두 결국 큰 맥락은 같다. 0-1BFS는 신선한 접근 방식이였다.
+# 삼각형 변의 성립조건을 활용하는 문제이다.
+# 변의 최댓값을 구하는 문제이기 때문에, 정렬 후 선형탐색하면 된다.
 
 import sys; readline = sys.stdin.readline
-import heapq
 
+n = int(input())
+nums = []
+for _ in range(n):
+    nums.append(int(readline()))
+nums.sort(reverse=True)
 
-# PriorityQueue BFS
-
-MAX = 100000
-CAPA = 200000
-N, K = map(int, input().split())
-
-visited = [False for _ in range(CAPA + 1)]
-visited[N] = True
-pq = [(0, N)]
-
-while pq:
-    time, now = heapq.heappop(pq)
-    if now == K:
-        print(time)
+solved = False
+for i in range(len(nums) - 3 + 1):
+    if nums[i] < nums[i + 1] + nums[i + 2]:
+        print(sum(nums[i:i + 3]))
+        solved = True
         break
 
-    if now * 2 <= CAPA and not visited[now * 2]:
-        heapq.heappush(pq, (time, now * 2))
-        visited[now * 2] = True
-
-    if now + 1 <= MAX and not visited[now + 1]:
-        heapq.heappush(pq, (time + 1, now + 1))
-        visited[now + 1] = True
-
-    if now - 1 >= 0 and not visited[now - 1]:
-        heapq.heappush(pq, (time + 1, now - 1))
-        visited[now - 1] = True
+if not solved:
+    print(-1)
 
 
-# 다익
+# n = int(input())
+# ans = 0
 #
-# INF = float('inf')
-# MAX = 100000
-# N, K = map(int, input().split())
+# def calculate(n):
+#     global ans
+#     d = n
 #
-# cost = [INF]*(2*MAX+1)
-# cost[N] = 0
-# pq = [(0, N)]
-#
-# while pq:
-#     time, now = heapq.heappop(pq)
-#     if time > cost[now]:
-#         continue
-#
-#     for i in range(3):
-#         ntime, nnow = time, now
-#         if i == 0:
-#             nnow *= 2
-#         elif i == 1:
-#             ntime += 1
-#             nnow += 1
+#     for dot in [4, 2]:
+#         if d >= dot:
+#             d -= dot
+#             ans += 1
 #         else:
-#             ntime += 1
-#             nnow -= 1
+#             return ans
 #
-#         if 0 <= nnow <= 2*MAX and ntime < cost[nnow]:
-#             cost[nnow] = ntime
-#             heapq.heappush(pq, (ntime, nnow))
-# print(cost[K])
+#     required_dot = [2, 1]
+#     while True:
+#         for rep in range(2):
+#             for dot in required_dot:
+#                 if d >= dot:
+#                     d -= dot
+#                     ans += 1
+#                 else:
+#                     return ans
+#
+#         required_dot.append(1)
+#
+#
+# calculate(n)
+# print(ans)
+# sqrt_n = int(math.sqrt(n))
+# for i in range(3, sqrt_n + 1):
+#     gap = sqrt_n - i + 1
+#     ans += gap*gap
+#     print(ans)
+#
+# print(ans)
