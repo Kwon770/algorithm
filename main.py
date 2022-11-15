@@ -1,51 +1,59 @@
-# https://www.acmicpc.net/problem/24025
-# 24025 돌의 정렬 줄세우기
-# Memory : 38624 KB / Time : 124 ms
+# https://www.acmicpc.net/problem/14215
+# 14215 세 막대
+# Memory: 30840kb / Time: 68ms
 
-# 문제의 핵심은 어느정도 깨달았지만, PS하기 위한 이해와 실제 PS로 옮기지는 못했다.
+# https://way-code.tistory.com/entry/%EB%B0%B1%EC%A4%80-14215%EB%B2%88-%EC%84%B8-%EB%A7%89%EB%8C%80-%ED%8C%8C%EC%9D%B4%EC%8D%AC
+
+import sys; readline = sys.stdin.readline
+
+lines = list(map(int, readline().split()))
+lines.sort()
+cond = lines[0] + lines[1]
+if cond <= lines[2]:
+    print(lines[0] + lines[1] + cond - 1)
+else:
+    print(sum(lines))
 
 
+# https://www.acmicpc.net/problem/2531
 # import sys; readline = sys.stdin.readline
-# from itertools import combinations
-# from math import gcd
 #
+# n, d, k, c = map(int, readline().split())
+# sushi = [int(readline()) for _ in range(n)]
+# sushi += sushi[:k]
 #
-# t = int(readline())
-# for _ in range(t):
-#     n = int(readline())
-#     arr = list(map(int, readline().split()))
-#     index = [-1] * (200001)
-#     for i in range(n - 1, -1 ,-1):
-#         if index[arr[i]] == -1:
-#             index[arr[i]] = i + 1
+# ans = -1
+# for i in range(n):
+#     kind = set(sushi[i:i+k])
+#     comb = len(kind)
+#     if c not in kind:
+#         comb += 1
 #
-#     ans = -1
-#     for comb in combinations(arr, 2):
-#         if gcd(comb[0], comb[1]) == 1:
-#             ans = max(ans, index[comb[0]] + index[comb[1]])
-#
-#     for ele in arr:
-#         if gcd(ele, ele) == 1:
-#             ans = max(ans, index[ele] + index[ele])
-#
-#     print(ans)
+#     ans = max(ans, comb)
+# print(ans)
 
-
+# https://www.acmicpc.net/problem/2981
 # import sys; readline = sys.stdin.readline
-# from math import gcd
+# from math import gcd, sqrt
 #
+# n = int(readline())
+# nums = [int(readline()) for _ in range(n)]
+# nums.sort(reverse=True)
 #
-# t = int(readline())
-# for _ in range(t):
-#     n = int(readline())
-#     arr = list(map(int, readline().split()))
+# subs = []
+# for i in range(n - 1):
+#     subs.append(nums[i] - nums[i + 1])
 #
-#     ans = -1
-#     for i in range(n - 1, -1, -1):
-#         for j in range(i, -1, -1):
-#             if gcd(arr[i], arr[j]) == 1:
-#                 ans = max(ans, i + j + 2)
-#                 break
+# g = subs[0]
+# for i in range(1, len(subs)):
+#     g = gcd(g, subs[i])
 #
-#     print(ans)
-
+# ans = [g]
+# for i in range(2, int(sqrt(g)) + 1):
+#     if g % i != 0:
+#         continue
+#
+#     ans.append(i)
+#     ans.append(g // i)
+# ans = sorted(list(set(ans)))
+# print(*ans)
