@@ -1,3 +1,4 @@
+from itertools import combinations, permutations
 from collections import deque
 import heapq
 
@@ -15,7 +16,7 @@ def bfs(n):
     visited = [False] * (n+1)
     queue = deque([start])
     visited[start] = True
-
+    li = []
     while queue:
         now = queue.popleft()
         for node in graph[now]:
@@ -28,7 +29,7 @@ def dijkstra(start):
     distance = [INF] * (n+1)
 
     q = [(start, 0)]
-    while q:
+        while q:
         now, dist = heapq.heappop(q)
         if distance[now] < dist:
             continue
@@ -38,7 +39,6 @@ def dijkstra(start):
             if distance[node[0]] > cost:
                 distance[node[0]] = cost
                 heapq.heappush(q, (node[0], cost))
-
 
 def floyd():
     # graph, a to b의 가중치, 2d arr
