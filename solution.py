@@ -4,6 +4,21 @@ import heapq
 
 INF = int(1e9)
 
+# from collections import deque
+# import heapq
+# import math
+#
+# print(math.gcd(2,5))
+# print(math.lcm(2,5))
+#
+# q = []
+# heapq.heappush(q, 2)
+# print(heapq.heappop(q))
+#
+# # a=[(1,2),(2,2),(4,1)]
+# # a=sorted(a, key=lambda x: (x[1], x[0]))
+# # print(a)
+
 def dfs(graph, v, visited):
     # graph, a에서 갈 수 있는 인접 노드들, 인접 행렬
     visitied[v] = True
