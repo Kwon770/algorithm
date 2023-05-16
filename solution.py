@@ -31,7 +31,6 @@ def bfs(n):
     visited = [False] * (n+1)
     queue = deque([start])
     visited[start] = True
-    li = []
     while queue:
         now = queue.popleft()
         for node in graph[now]:
@@ -43,17 +42,17 @@ def dijkstra(start):
     # graph, a에서 갈 수 있는 인접 노드들, 인접 행렬
     distance = [INF] * (n+1)
 
-    q = [(start, 0)]
-        while q:
-        now, dist = heapq.heappop(q)
+    q = [(0, start)]
+    while q:
+        dist, now = heapq.heappop(q)
         if distance[now] < dist:
             continue
 
         for node in graph[now]:
-            cost = distance[now] + node[1]
-            if distance[node[0]] > cost:
-                distance[node[0]] = cost
-                heapq.heappush(q, (node[0], cost))
+            cost = distance[now] + node[0]
+            if distance[node[1]] > cost:
+                distance[node[1]] = cost
+                heapq.heappush(q, (cost, node[1]))
 
 def floyd():
     # graph, a to b의 가중치, 2d arr
