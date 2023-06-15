@@ -7,28 +7,24 @@
 
 import sys; readline = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
-import math
 
-# N <= 1000,0000,0000,0000
-# A, B, C, D <= 10,0000
-N, A, B, C, D = map(int, readline().split())
-price = 0
 
-# A 가 가성비 좋은, C 가 가성비 나쁜
-if B/A > D/C:
-    A, C = C, A
-    B, D = D, B
+for T in range(int(readline())):
+    parents = [-1] * (10001)
+    visited = [False] * (10001)
+    N = int(readline())
 
-ans = sys.maxsize
-lcm = math.lcm(A, C)
-for c_buy in range(lcm//C):
-    a_buy = math.ceil((N - (C * c_buy)) / A)
+    for _ in range(N - 1):
+        parent, child = map(int, readline().split())
+        parents[child] = parent
 
-    is_over = False
-    if a_buy < 0:
-        a_buy = 0
-        is_over = True
+    a, b = map(int, readline().split())
+    visited[a] = True
+    while parents[a] != -1:
+        a = parents[a]
+        visited[a] = True
 
-    ans = min(ans, a_buy*B + c_buy*D)
-    if is_over: break
-print(ans)
+    while not visited[b] and parents[b] != -1:
+        b = parents[b]
+
+    print(b)
