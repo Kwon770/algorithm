@@ -13,7 +13,7 @@
         2 5
         1 5
     - 1을 움직일 때 3도 같이 움직여야하며, (1, 3)과 2의 위치 관계는 후속 규칙에서 어떻게 규정할지 모른다.
-    
+
 => 임의로 숫자를 순회하되 이 숫자보다 앞에 있을 수 있는 모든 숫자를 확인한다. 더 이상 앞에 있을 숫자가 없다면, 순서에 넣는다.
     ex) 1 3
         3 4
@@ -22,7 +22,9 @@
         있더라도, dfs를 통해 (1, 3) 규칙을 순회하는 과정에서 이미 검토한다.)
 """""
 
-import sys; readline = sys.stdin.readline
+import sys;
+
+readline = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
 
 N, M = map(int, readline().split())
