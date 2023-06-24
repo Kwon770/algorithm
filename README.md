@@ -14,6 +14,10 @@
 
 | note                                                            | link                                                      |
 |-----------------------------------------------------------------|-----------------------------------------------------------|
+| <span style="background-color: #fff5b1;">**점검하고 가자**</span>     |                                                           |
+| Graph - MST(Minimum Spanning Tree, 최소신장트리) - 크루스칼, 프림           | [도시 분할 계획](./sol_from_BOJ/graph/boj1647.py)               |
+|                                                                 |                                                           |
+|                                                                 |                                                           |
 | <span style='background-color: #fff5b1'>**DP**</span>           |                                                           |
 | DP 전형적인 유형 (표 형태)                                               | [동물원](./sol_from_BOJ/dp/boj1309.py)                       |
 | DP 전형적인 유형 : 캐싱이 없으면 고려해야할 경우의 수가 너무 많은 문제 (표 형태)               | [금광](./sol_from_etc/book_이것이코딩테스트다/Q31.py)                |
@@ -21,11 +25,6 @@
 | DP 냄새가 옅어도 파이썬에선 잘 캐치해야한다.                                      | [파이프 이동1](./sol_from_BOJ/dp/boj17070.py)                  |
 | DP 문제처럼 보여도 그리디로 풀 수 있는 문제는?                                    | [택배](./sol_from_BOJ/greedy/boj8980.py)                    |
 | DP 문제처럼 보여도 메모리가 모자라다면 타개법을 찾아야하는 문제는?                          | [신기한 소수](./sol_from_BOJ/ps/boj2023.py)                    |
-|                                                                 |                                                           |
-|                                                                 |                                                           |
-| <span style="background-color: #fff5b1;">**Two Pointer**</span> |                                                           |
-| 투포인터를 써야한다는 것을 눈치채야하는 문제                                        | [Longest Strike](./sol_from_codeforces/790_div4/1676F.py) |
-| 투포인터로 부분합 구하기                                                   | [부분합](./sol_from_BOJ/two_pointer/boj1806.py)              |
 |                                                                 |                                                           |
 |                                                                 |                                                           |
 | <span style="background-color: #fff5b1;">**PS**</span>          |                                                           |
@@ -41,3 +40,8 @@
 | <span style="background-color: #fff5b1;">**Simulation**</span>  |                                                           |
 | 배열을 90도 회전시키기                                                   | [자물쇠와 열쇠](./sol_from_Programmers/kakao_blind/pr60059.py)  |
 | 좌표 기준이 칸인지 점인지 주의하기                                             | [영역 구하기](./sol_from_BOJ/DFSBFS/boj2583.py)                |
+|                                                                 |                                                           |
+|                                                                 |                                                           |
+| <span style="background-color: #fff5b1;">**Two Pointer**</span> |                                                           |
+| 투포인터를 써야한다는 것을 눈치채야하는 문제                                        | [Longest Strike](./sol_from_codeforces/790_div4/1676F.py) |
+| 투포인터로 부분합 구하기                                                   | [부분합](./sol_from_BOJ/two_pointer/boj1806.py)              |
