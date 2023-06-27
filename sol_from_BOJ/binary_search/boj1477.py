@@ -2,7 +2,6 @@
 # 1477 휴게소 세우기
 # Memory: 32156 KB, Time: 44 ms
 
-
 """
 이분탐색 심화, 매개변수탐색 (파라매트릭 서치, Parametric search) 문제다.
 
@@ -24,9 +23,8 @@
 * 문제 조건에 의하여 spots에 0과 L을 추가했기 때문에, 순회에서 N을 기준으로 하면 안됨
 """""
 
-import sys;
 
-readline = sys.stdin.readline
+import sys; readline = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
 
 N, M, L = map(int, readline().split())
