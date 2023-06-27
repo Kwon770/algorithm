@@ -15,7 +15,7 @@
     => 다른 풀이에서는 **부 배열의 합을 리스트에 담고, 이진탐색 left right를 구하여, 부 배열 쌍의 갯수**를 구한다.
         => Dict이 (x in s) (get, set) 모두 O(1)으로 시간복잡도 상으로는 현재 풀이가 더 효율적
         => 풀이 자체는 흥미로움. 기억해두기
-        
+
 !! T와 배열의 원소는 0 혹은 음수를 포함한다 !!
 반례를 찾던중 문제의 QnA를 오독해서, 0 혹은 음수가 없다고 생각하고 풀어서, 계속 틀렸다
 - 애초에 T의 범위는 (-10억 <= T <= +10억)
@@ -24,7 +24,9 @@
 
 """""
 
-import sys; readline = sys.stdin.readline
+import sys;
+
+readline = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
 
 T = int(readline())
