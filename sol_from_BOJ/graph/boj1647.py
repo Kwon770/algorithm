@@ -33,7 +33,6 @@ import sys;
 
 readline = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
-import heapq
 
 
 def find(x):

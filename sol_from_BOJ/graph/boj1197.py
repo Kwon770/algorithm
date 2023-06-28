@@ -1,9 +1,10 @@
-# https://www.acmicpc.net/problem/1477
-# 1477 휴게소 세우기
-# Memory: 32156 KB, Time: 44 ms
+# https://www.acmicpc.net/problem/1197
+# 1197 최소 스패닝 ㅌ트리
+# Memory: 47788 KB, Time: 296 ms
 
 
 """
+그저 최소 스패닝 트리를 만드는 코드
 """""
 
 import sys; readline = sys.stdin.readline
