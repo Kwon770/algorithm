@@ -1,3 +1,9 @@
+# https://www.acmicpc.net/problem/14503
+# 14503 로봇 청소기
+# Memory: 31256 KB, Time: 44 ms
+
+# 좌표와 방향을 이용한 시뮬레이션
+
 import sys; readline = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
 

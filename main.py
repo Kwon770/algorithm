@@ -17,21 +17,51 @@
 """""
 
 
-"""정돈된 풀이"""
 import sys; readline = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
 
+dr = [-1, 0, 1, 0]
+dc = [0, 1, 0, -1]
+
 N, M = map(int, readline().split())
-subsum = [[0 for _ in range(M + 1)] for _ in range(N + 1)]
-for i in range(1, N + 1):
-    arr = list(map(int, readline().split()))
+r, c, d = map(int, readline().split())
+arr = []
+for i in range(N):
+    arr.append(list(map(int, readline().split())))
 
-    for j in range(1, M + 1):
-        subsum[i][j] = subsum[i - 1][j] + subsum[i][j - 1] - subsum[i - 1][j - 1] + arr[j - 1]
+ans = 0
+cleaned = [[False] * M for _ in range(N)]
+end = False
+while not end:
+    if not cleaned[r][c]:
+        cleaned[r][c] = True
+        ans += 1
+        continue
 
-K = int(input())
-for _ in range(K):
-    x1, y1, x2, y2 = map(int, readline().split())
+    cleanable = False
+    for i in range(1, 5):
+        nd = (d - i) % 4
+        nr = r + dr[nd]
+        nc = c + dc[nd]
+        if nr < 0 or nc < 0 or nr >= N or nc >= M or arr[nr][nc] == 1:
+            continue
+        if not cleaned[nr][nc]:
+            cleanable = True
 
-    total = subsum[x2][y2] - subsum[x1 - 1][y2] - subsum[x2][y1 - 1] + subsum[x1 - 1][y1 - 1]
-    print(total)
+            d = nd
+            r = nr
+            c = nc
+            break
+
+    if not cleanable:
+        back_d = (d + 2) % 4
+        nr = r + dr[back_d]
+        nc = c + dc[back_d]
+        if nr < 0 or nc < 0 or nr >= N or nc >= M or arr[nr][nc] == 1:
+            end = True
+            continue
+
+        r = nr
+        c = nc
+
+print(ans)
