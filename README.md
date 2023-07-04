@@ -16,7 +16,8 @@
 |-----------------------------------------------------------------|-----------------------------------------------------------|
 | <span style="background-color: #fff5b1;">**점검하고 가자**</span>     |                                                           |
 | Graph - MST(Minimum Spanning Tree, 최소신장트리) - 크루스칼, 프림           | [도시 분할 계획](./sol_from_BOJ/graph/boj1647.py)               |
-| Graph - 위상 정렬(그래프의 노드간의 의존관계 처리 로직)                             | [문제집](sol_from_BOJ/graph/boj1766.py)      |
+| Graph - 위상 정렬(그래프의 노드간의 의존관계 처리 로직)                             | [문제집](sol_from_BOJ/graph/boj1766.py)                      |
+| 부분합 (계산 최적화)                                                    | [문제집](sol_from_BOJ/ps/boj15724.py)                        |
 |                                                                 |                                                           |
 |                                                                 |                                                           |
 | <span style='background-color: #fff5b1'>**DP**</span>           |                                                           |
@@ -33,7 +34,7 @@
 | 이진 탐색 응용 (범위 내의 원소 갯수 구하기, 문자열의 일정 범위 검색)                       | [가사 검색](./sol_from_Programmers/kakao_blind/pr60060.py)    |
 | 원소 변경이 잦은 배열의 중앙값 찾기 : MaxHeap, MinHeap 응용                      | [중앙값 구하기](./sol_from_BOJ/data_structure/boj2696.py)       |
 | 프로그래밍적인 풀이가 오하려 복잡할 때는 파이써닉하게 짜보자1 (조건비교, 패턴)                   | [TicTaeToe](./sol_from_BOJ/ps/boj13227.py)                |
-| 위상정렬 혹은 재귀+DP 풀이                          | [ACM Craft](./sol_from_BOJ/ps/boj1005.py)                 |
+| 위상정렬 혹은 재귀+DP 풀이                                                | [ACM Craft](./sol_from_BOJ/ps/boj1005.py)                 |
 | 원소가 두 개인 튜플 탐색                                                  | [뱀](./sol_from_BOJ/simulation/boj3190.py)                 |
 | 정렬 조건 설정하기, 조건 설정 방법별 소요 시간 차이                                  | [국영수](./sol_from_BOJ/sort/boj10825.py)                    |
 |                                                                 |                                                           |
