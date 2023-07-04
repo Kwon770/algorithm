@@ -21,13 +21,13 @@ list는 stack이기 때문에, 버튼 조작 횟수 10 초과부터 종료해야
 """""
 
 
-"""정돈된 풀이"""
 import sys; readline = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
 import heapq
 
 dr = [-1, 0, 1, 0]
 dc = [0, 1, 0, -1]
+
 N, M = map(int, readline().split())
 coin = [0]
 board = []
@@ -40,8 +40,6 @@ for i in range(N):
 
 possible = False
 q = [coin]
-visited = [[[[False for _ in range(22)] for _ in range(22)] for _ in range(22)] for _ in range(22)]
-
 while q:
     coin = heapq.heappop(q)
     if coin[0] >= 10:
@@ -80,9 +78,7 @@ while q:
         elif (f_drop and s_drop) or (f_stop and s_stop):
             continue
         else:
-            if not visited[fr][fc][sr][sc]:
-                visited[fr][fc][sr][sc] = True
-                q.append([coin[0] + 1, (fr, fc), (sr, sc)])
+            q.append([coin[0] + 1, (fr, fc), (sr, sc)])
 
 if not possible:
     print(-1)
