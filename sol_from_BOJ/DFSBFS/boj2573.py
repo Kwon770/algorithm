@@ -22,12 +22,14 @@
 4. visited를 이용해서 2번의 문제를 해결할 수 있다.
 빙산을 녹이는 과정에서 빙산이 0이 되었더라도 visited를 통해 방문한 빙산을 표시하면, 바다의 갯수를 세아리는 과정에서 문제가 발생하지 않는다.
 그래서 바다는 visited처리하지 않고 바다만 visited처리 한다.  
- 
+
 """""
 
+import sys;
 
-import sys; readline = sys.stdin.readline
+readline = sys.stdin.readline
 import copy
+
 # sys.setrecursionlimit(10 ** 5)
 
 dr = [-1, 0, 1, 0]
@@ -88,7 +90,6 @@ while True:
         break
 
     time += 1
-
 
 # N, M = map(int, readline().split())
 # arr = []
