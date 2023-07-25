@@ -23,11 +23,12 @@ n  |  경우의 수
 
 - 즉, 2를 이용한 경우의 수 dp는 (n - 2)를 1의 합 만으로 나타내는 각 방법에 2를 더한 것이므로
     - { [2를 이용한 (n=4)의 경우의 수] = [1를 이용한 (n=4)의 경우의 수] + [1를 이용한 (n=2)의 경우의 수] } 이다.
-    
+
 """""
 
+import sys;
 
-import sys; readline = sys.stdin.readline
+readline = sys.stdin.readline
 sys.setrecursionlimit(10 ** 5)
 
 dp = [1] * 10001
