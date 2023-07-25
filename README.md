@@ -18,6 +18,7 @@
 | Graph - MST(Minimum Spanning Tree, 최소신장트리) - 크루스칼, 프림           | [도시 분할 계획](./sol_from_BOJ/graph/boj1647.py)               |
 | Graph - 위상 정렬(그래프의 노드간의 의존관계 처리 로직)                             | [문제집](sol_from_BOJ/graph/boj1766.py)                      |
 | 부분합 (계산 최적화)                                                    | [문제집](sol_from_BOJ/ps/boj15724.py)                        |
+| 구현 (쌩 구현만 구현이 아니다)                                              | [문제집](sol_from_BOJ/simulation/boj20125.py)                |
 |                                                                 |                                                           |
 |                                                                 |                                                           |
 | <span style='background-color: #fff5b1'>**DP**</span>           |                                                           |

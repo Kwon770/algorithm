@@ -20,127 +20,14 @@
 import sys; readline = sys.stdin.readline
 sys.setrecursionlimit(10 ** 5)
 
-N = int(input())
-cookie = []
-for _ in range(N):
-    cookie.append(readline().rstrip())
+dp = [1] * 10001
 
+for i in range(2, 10001):
+    dp[i] += dp[i - 2]
 
-head = (-1, -1)
-arm_l = -1
-arm_r = -1
-body_b = -1
-leg_l = -1
-leg_r = -1
+for i in range(3, 10001):
+    dp[i] += dp[i - 3]
 
-for r in range(N):
-    for c in range(N):
-        if cookie[r][c] == '_':
-            continue
-
-        # 머리는 늘 먼저
-        if head[0] == -1:
-            head = (r, c)
-
-        # 머리 아래는 팔
-        elif r - 1 == head[0]:
-            # 팔은 왼쪽부터
-            if arm_l == -1:
-                arm_l = c
-            else:
-                arm_r = c
-
-        # 머리랑 같은 col, body의 col이면 계속 그 높이를 갱신해나감
-        elif c == head[1]:
-            body_b = r
-
-        # 머리의 좌우인지만 확인하고 갱신하면 결국 다리, 팔은 위에서 거르니까 애초에 팔이랑 헷갈리지 않음
-        # 몸통과 마찬가지로 높이를 갱신해나감
-        elif c == head[1] - 1:
-            leg_l = r
-        elif c == head[1] + 1:
-            leg_r = r
-
-print(head[0] + 1 + 1, head[1] + 1)
-print(head[1] - arm_l, arm_r - head[1], body_b - head[0] - 1, leg_l - body_b, leg_r - body_b)
-
-
-""" 순회 + 구현
-dr = [-1, 0, 1, 0]
-dc = [0, 1, 0, -1]
-
-heart_r = -1
-heart_c = -1
-def isHeart(r, c):
-    return heart_r == r and heart_c == c
-
-
-def isThere(r, c):
-    if r < 0 or c < 0 or r >= N or c >= N:
-        return False
-
-    if cookie[r][c] == '_':
-        return False
-    else:
-        return True
-
-
-visited = [[False for _ in range(N)] for _ in range(N)]
-
-#### 정답은 인덱스 + 1 !!!
-isMetHead = False
-lengths = [0, 0, 0, 0, 0]
-for r in range(N):
-    for c in range(N):
-        if visited[r][c]: continue
-
-        visited[r][c] = True
-        if cookie[r][c] == '_':
-            continue
-
-        dir = -1
-        idx = -1
-        if not isMetHead:
-            isMetHead = True
-            heart_r = r + 1
-            heart_c = c
-            visited[heart_r][heart_c] = True
-            continue
-
-        # right arm
-        elif isHeart(r, c - 1):
-            dir = 1
-            idx = 1
-        # left arm
-        elif isThere(r, c + 1):
-            dir = 1
-            idx = 0
-        # wirst
-        elif isHeart(r - 1, c):
-            dir = 2
-            idx = 2
-        # left leg
-        elif isThere(r - 1, c + 1):
-            dir = 2
-            idx = 3
-        # right leg
-        elif isThere(r - 1, c - 1):
-            dir = 2
-            idx = 4
-
-        nr = r
-        nc = c
-        length = 0
-        while isThere(nr, nc) and not isHeart(nr, nc):
-            print(idx, nr, nc)
-            visited[nr][nc] = True
-
-            length += 1
-            nr += dr[dir]
-            nc += dc[dir]
-
-        lengths[idx] = length
-
-print(heart_r + 1, heart_c + 1)
-print(' '.join(map(str, lengths)))
-"""
+for _ in range(int(readline())):
+    n = int(readline())
+    print(dp[n])
