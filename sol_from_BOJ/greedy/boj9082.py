@@ -1,5 +1,5 @@
-# https://www.acmicpc.net/problem/15989
-# 15989 1, 2, 3 더하기 4
+# https://www.acmicpc.net/problem/9082
+# 9082 지뢰찾기
 # Memory: 31256 KB, Time: 40 ms
 # Memory: 31256 KB, Time: 44 ms
 
