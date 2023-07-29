@@ -56,12 +56,3 @@
 | 이분탐색 심화 - 파라매트릭 서치 (Parametric search)                          | [휴게소 세우기](./sol_from_BOJ/binary_search/boj1477.py)        |
 | BFS - 시간 조건이 빡빡한 경우, 파이썬으로서 해야할 것                               | [빙산](./sol_from_BOJ/DFSBFS/boj2573.py)             |
 ---
-
-# 📚 SWM14 소마트리뷰 팀 - 알고리즘 스터디
-
-| 풀이                                                 |
-|----------------------------------------------------|
-| [1. 침식](./sol_from_BOJ/DFSBFS/boj13565.py)         |
-| [2. 주지수](./sol_from_BOJ/ps/boj15724.py)            |
-| [3. 로봇 청소기](./sol_from_BOJ/simulation/boj14503.py) |
-| [4. 두 동전](./sol_from_BOJ/simulation/boj16197.py)   |
