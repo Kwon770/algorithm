@@ -19,7 +19,7 @@
 | Graph - 위상 정렬(그래프의 노드간의 의존관계 처리 로직)                             | [문제집](sol_from_BOJ/graph/boj1766.py)                      |
 | 부분합 (계산 최적화)                                                    | [주지수](sol_from_BOJ/ps/boj15724.py)                        |
 | 구현 (쌩 구현만 구현이 아니다)                                              | [쿠키의 신체 측정](sol_from_BOJ/simulation/boj20125.py)          |
-| 그냥 무조건 구현, 시뮬레이션하려 하지 말자.  (TLE)                                | [마인크래프트](sol_from_BOJ/ps/boj18111.py)          
+| 그냥 무조건 구현, 시뮬레이션하려 하지 말자.  (TLE)                                | [마인크래프트](sol_from_BOJ/ps/boj18111.py)                     
 |                                                                 |                                                           |
 |                                                                 |                                                           |
 | <span style='background-color: #fff5b1'>**DP**</span>           |                                                           |
@@ -55,5 +55,7 @@
 |                                                                 |                                                           |
 | <span style="background-color: #fff5b1;">**심화**</span>          |                                                           |
 | 이분탐색 심화 - 파라매트릭 서치 (Parametric search)                          | [휴게소 세우기](./sol_from_BOJ/binary_search/boj1477.py)        |
-| BFS - 시간 조건이 빡빡한 경우, 파이썬으로서 해야할 것                               | [빙산](./sol_from_BOJ/DFSBFS/boj2573.py)             |
+| BFS - 시간 조건이 빡빡한 경우, 파이썬으로서 해야할 것                               | [빙산](./sol_from_BOJ/DFSBFS/boj2573.py)                    |
+| 유니온 파인드 - 경로 압축                                                 | [공항](./sol_from_BOJ/union_find/boj10775.py)               |
+|                                                                 |                                                           |
 ---
