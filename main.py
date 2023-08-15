@@ -29,30 +29,14 @@
 """""
 
 import sys; readline = sys.stdin.readline
-sys.setrecursionlimit(10 ** 6)
+# sys.setrecursionlimit(10 ** 6)
 
-def find(x):
-    if gate[x] == x:
-        return x
+N = int(readline())
+T, M = map(int, readline().split())
+for _ in range(N):
+    c = int(readline())
+    T += (M + c) // 60
+    T %= 24
+    M = (M + c) % 60
 
-    gate[x] = find(gate[x])
-    return gate[x]
-
-def union(x, y):
-    x, y = find(x), find(y)
-    gate[y] = x
-
-G = int(readline())
-gate = [i for i in range(G + 1)]
-P = int(readline())
-for i in range(P):
-    g = int(readline())
-
-    next_gate = find(g)
-    if next_gate <= 0:
-        P = i
-        break
-
-    union(next_gate - 1 , next_gate)
-
-print(P)
+print(T, M)
