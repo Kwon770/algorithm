@@ -1,11 +1,20 @@
 import sys; readline = sys.stdin.readline
 # sys.setrecursionlimit(10 ** 6)
 
+N = int(readline())
+hambuger = list(map(int, readline().split()))
+increase = True
+top = -1
+broken = False
 
-N, K = map(int, readline().split())
-arr = []
-for i in list(map(int, readline().split())):
-    arr.append((str(bin(i)).count('1'), i))
+for i in range(1, N):
+    if increase and hambuger[i - 1] > hambuger[i]:
+            increase = False
+            top = hambuger[i - 1]
+    if not increase and hambuger[i - 1] < hambuger[i]:
+        broken = True
 
-arr.sort(reverse = True)
-print(arr[K - 1][1])
+if broken:
+    print(0)
+else:
+    print(sum(hambuger))
