@@ -1,6 +1,4 @@
-import sys;
-
-readline = sys.stdin.readline
+import sys; readline = sys.stdin.readline
 
 N = int(readline())
 A, B = map(int, readline().split())
