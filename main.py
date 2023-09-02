@@ -8,28 +8,24 @@
 
 import sys; readline = sys.stdin.readline
 
-N, M, K = map(int, readline().split())
-edges = [[False for _ in range(N + 1)] for _ in range(N + 1)]
-for _ in range(M):
-    a, b = map(int, readline().split())
-    edges[a][b] = True
-    edges[b][a] = True
+N, K = map(int, readline().split())
+fruit = []
+for i in range(N):
+    p, c = map(int, readline().split())
+    fruit.append([c // p, p])
 
-visited = [False for _ in range(N + 1)]
-node = K
-cnt = 1
-stop = False
+full = 0
+fruit.sort(reverse=True)
+for i in range(N):
+    if fruit[i][1] <= K:
+        full += fruit[i][0] * fruit[i][1]
+        K -= fruit[i][1]
 
-while True:
-    visited[node] = True
+    else:
+        full += fruit[i][0] * K
+        K = 0
 
-    stop = True
-    for i in range(1, N + 1):
-        if edges[node][i] and not visited[i]:
-            stop = False
-            node = i
-            cnt += 1
-            break
-    if stop: break
+    if K <= 0:
+        break
 
-print(cnt, node)
+print(full)
