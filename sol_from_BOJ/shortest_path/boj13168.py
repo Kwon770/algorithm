@@ -1,10 +1,17 @@
-# https://www.acmicpc.net/problem/10775
-# 10775 공항
-# Memory: 35108 KB, Time: 144 ms, python3
-
 """
+https://www.acmicpc.net/problem/10775
+13168 내일로 여행
+Memory: 31129 KB, Time: 944 ms
 
+플로이드 와샬을 이용해서 푸는 문제이지만, 도시가 문자열로 주어진다던가 두 개의 경우의 최단거리를 구한다던가 등의
+그래프를 복잡하게 다루는 문제였다. 그 중에서도 실수하기 가장 좋고, 내가 제일 했던 이슈는
+
+1. 문제에서 교통수단의 양쪽 도시라고만 언급하는데, 이는 왕복이 가능하다는 것을 의미
+2. 같은 경로에 여러 교통수단이 주어지므로, 더 최소 교통수단으로 갱신해야 함
+3. 내일로를 통해 50% 할인을 받을 때, 실수로 계산해야 함 
 """""
+
+
 import sys; readline = sys.stdin.readline
 INF = 9876543210
 
@@ -41,7 +48,7 @@ for _ in range(K):
     t_prices[a][b] = min(t_prices[a][b], get_t_price(typei, price))
     t_prices[b][a] = min(t_prices[b][a], get_t_price(typei, price))
 
-
+# 플로이드 와샬
 for mid in range(C):
     for start in range(C):
         for end in range(C):
