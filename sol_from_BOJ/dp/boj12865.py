@@ -1,7 +1,13 @@
 """
-https://www.acmicpc.net/problem/10775
-10775 공항
-Memory: 35108 KB, Time: 144 ms, python3
+https://www.acmicpc.net/problem/12865
+12865 평범한 배낭
+Memory: 227036 KB, Time: 4548 ms
+
+냅색, 배낭 문제
+https://howudong.tistory.com/106
+
+- dp[n번까지의 아이템을 판단했을때][용량 k에 넣을 수 있는] = 최대 가치
+- 아이템 중복 안됨
 """""
 
 import sys; readline = sys.stdin.readline

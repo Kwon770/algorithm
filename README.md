@@ -16,7 +16,8 @@
 |---------------------------------------------------------------------|-----------------------------------------------------------|
 | <span style="background-color: #fff5b1;">**점검하고 가자**</span>         |                                                           |
 | 플로이드 와샬                                                             | [내일로 여행](sol_from_BOJ/shortest_path/boj13168.py)          |
-| 맵과 커스텀 정렬 키 (`get(key, default)`, `sort(key = lambda x: (x[0],x[1]) | [베스트앨범](sol_from_Programmers/베스트앨범.py)           |
+| 맵과 커스텀 정렬 키 (`get(key, default)`, `sort(key = lambda x: (x[0],x[1]) | [베스트앨범](sol_from_Programmers/베스트앨범.py)                    |
+| 냅색 DP                                                               | [평범한 배낭](sol_from_BOJ/dp/boj12865.py)                     |
 | Graph - MST(Minimum Spanning Tree, 최소신장트리) - 크루스칼, 프림               | [도시 분할 계획](./sol_from_BOJ/graph/boj1647.py)               |
 | Graph - 위상 정렬(그래프의 노드간의 의존관계 처리 로직)                                 | [문제집](sol_from_BOJ/graph/boj1766.py)                      |
 | 부분합 (계산 최적화)                                                        | [주지수](sol_from_BOJ/ps/boj15724.py)                        |
