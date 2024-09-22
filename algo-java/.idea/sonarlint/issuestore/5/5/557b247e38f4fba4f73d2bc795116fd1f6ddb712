@@ -1,0 +1,9 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×±£°ûÿÿÿÿ8–éŠ›©1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÛÎº8—éŠ›©1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ü¯¥Õùÿÿÿÿ8­¿†›©1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Çµí‘8€êŠ›©1
+v
+java:S3012"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ÎùÂº8ƒêŠ›©1
+L	java:S1065"+Replace this use of System.out by a logger.(¾ùôŒùÿÿÿÿ8ƒêŠ›©1

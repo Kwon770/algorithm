@@ -1,0 +1,21 @@
+
+n	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ—§ó8ÞæÎ¿Ñ1
+U
+java:S1854‰"7Remove this useless assignment to local variable "INF".(Ñ—§ó8ŸçÎ¿Ñ1
+X	java:S125"<This block of commented-out lines of code should be removed.(õ¨Ê¸8ŸçÎ¿Ñ1
+F
+java:S1481‰"(Remove this unused "INF" local variable.(Ñ—§ó8 çÎ¿Ñ1
+
+java:S1130©"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ8¡çÎ¿Ñ1
+H	java:S106¬"+Replace this use of System.out by a logger.(øŸŠ°8¡çÎ¿Ñ1
+H	java:S106­"+Replace this use of System.out by a logger.(Ú£8¢çÎ¿Ñ1
+M	java:S106®"+Replace this use of System.out by a logger.(ñÍ¢–ûÿÿÿÿ8¢çÎ¿Ñ1
+X	java:S125¯"<This block of commented-out lines of code should be removed.(÷Ûõd8¢çÎ¿Ñ1
+@
+java:S1128"$Remove this unused import 'java.io'.(¬›ãD8¢çÎ¿Ñ1
+R
+java:S1128"0Remove this unused import 'java.time.DayOfWeek'.(Óò»¸þÿÿÿÿ8¢çÎ¿Ñ1
+R
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èýÿÿÿÿ8¢çÎ¿Ñ1
+W
+java:S1128":Remove this unused import 'java.time.temporal.WeekFields'.(Ä¡œµ8¢çÎ¿Ñ1

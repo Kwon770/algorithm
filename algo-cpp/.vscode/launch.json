@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "launch and debug",
+      "program": "./a.out",
+      "preLaunchTask": "build_g++",
+      "request": "launch",
+      "args": [], 
+      "environment": [],
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb"
+    }
+  ]
+}

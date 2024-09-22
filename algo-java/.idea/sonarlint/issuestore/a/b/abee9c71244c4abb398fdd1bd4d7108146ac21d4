@@ -1,0 +1,17 @@
+
+^
+java:S4973 "<Strings and Boxed types should be compared using "equals()".(¡áûÄûÿÿÿÿ8‘üõôª1
+i
+java:S30088"LRename this field "N" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ ¬ï8¡üõôª1
+i
+java:S30088"LRename this field "M" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ ¬ï8¡üõôª1
+<
+java:S16598"Declare "M" on a separate line.(ğ ¬ï8¢üõôª1
+<
+java:S1659;"Declare "b" on a separate line.(ˆ‘œø8¢üõôª1
+X	java:S125"<This block of commented-out lines of code should be removed.(‰„™½8¢üõôª1
+R
+java:S1117"5Rename "a" which hides the field declared at line 59.(ˆ½½ğ8£üõôª1
+R
+java:S1117"5Rename "b" which hides the field declared at line 59.(ˆ½½ğ8£üõôª1
+L	java:S106P"+Replace this use of System.out by a logger.(‘Ù­¨üÿÿÿÿ8¦üõôª1

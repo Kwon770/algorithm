@@ -1,0 +1,13 @@
+
+^	cpp:S5945"=Use "std::array" or "std::vector" instead of a C-style array.(Óšœ˜øÿÿÿÿ8ÎÜ×†Î/
+S	cpp:S5945"2Use "std::string" instead of a C-style char array.(Óšœ˜øÿÿÿÿ8ÎÜ×†Î/
+Y	cpp:S5945"=Use "std::array" or "std::vector" instead of a C-style array.(¢½¸ó8ÎÜ×†Î/
+N	cpp:S5945"2Use "std::string" instead of a C-style char array.(¢½¸ó8ÏÜ×†Î/
+_	cpp:S55668"CChange this raw for-loop to a range for-loop or an "std::for_each".(Ñ·½À8ö¤‡Î/
+^	cpp:S5945&"=Use "std::array" or "std::vector" instead of a C-style array.(Ÿ÷ëÁùÿÿÿÿ8ŸåØ†Î/
+S	cpp:S5945&"2Use "std::string" instead of a C-style char array.(Ÿ÷ëÁùÿÿÿÿ8ç¨Ø†Î/
+^	cpp:S5945."=Use "std::array" or "std::vector" instead of a C-style array.(®éÃ·úÿÿÿÿ8šØ ‡Î/
+S	cpp:S5945."2Use "std::string" instead of a C-style char array.(®éÃ·úÿÿÿÿ8šØ ‡Î/
+_	cpp:S55669"CChange this raw for-loop to a range for-loop or an "std::for_each".(öË‘8ö¤‡Î/
+N	cpp:S5945?"2Use "std::string" instead of a C-style char array.(õ²òò8µÁò†Î/
+e	cpp:S1854&"DValue stored to 'characters' during its initialization is never read(Ÿ÷ëÁùÿÿÿÿ8§¾™‡Î/
