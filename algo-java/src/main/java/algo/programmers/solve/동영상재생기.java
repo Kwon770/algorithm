@@ -1,4 +1,6 @@
-package algo;
+package algo.programmers.solve;
+
+import algo.Main;
 
 import java.lang.*;
 import java.util.*;
@@ -19,7 +21,7 @@ import java.util.*;
  * 문제 설명이 다양하게 해석될 수 있는 점을 늘 놓치지 말자.
  */
 
-public class Main {
+public class 동영상재생기 {
 
     public int compare(String time1, String time2) {
         int m1 = Integer.parseInt(time1.split(":")[0]);
@@ -124,7 +126,7 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
-        Main main = new Main();
+        동영상재생기 main = new 동영상재생기();
 
         System.out.println(main.solution("34:33", "13:00", "00:55", "02:55", new String[]{"next", "prev"}));
         System.out.println(main.solution("10:55", "00:05", "00:15", "06:55", new String[]{"prev", "next", "next"}));

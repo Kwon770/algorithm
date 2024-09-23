@@ -33,4 +33,29 @@ public class Techinque {
         Integer[] arr = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(arr));
     }
+
+    public void string() {
+        String answer = "123";
+        for (char c : answer.toCharArray()) {
+            System.out.println(c);
+        }
+    }
+
+
+    // compare 결과는 param left > 1, same 0, param right > -1 기억하기
+    public int compare(int m1, int s1, int m2, int s2) {
+        if (m1 == m2) return Integer.compare(s1, s2);
+        return Integer.compare(m1, m2);
+    }
+
+    /*
+     * 2. 배열도 스트림 사용하는 법 : Arrays.stream(arr)
+     * 3. 스트림 형 변환 방법 : stream().mapToInt(Integer::parseInt) -> 원시타입 int로 변환됨 주의
+     * 4. 원시타입int 배열을 래퍼클래스Integer로 변환 : arr.boxed().toArray(Integer[]::new);
+     */
+    public void primitiveAndWrapper() {
+        int[] arr = {1, 2, 3, 4, 5};
+        Integer[] arr2 = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+        System.out.println(arr2.toString());
+    }
 }
