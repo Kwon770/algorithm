@@ -21,11 +21,11 @@ public class Techinque {
             numbers = numbers.replaceAll(zeroToNine[i], String.valueOf(i));
         }
 
-        // override osrt
+        // override sort ASC
         Integer[][] arr2 = {{1, 2}, {1, 1}, {5, 5}};
         Arrays.sort(arr2, (o1, o2) -> {
-            if (o1[0] == o2[0]) return o1[1] - o2[1];
-            else return o1[0] - o2[0];
+            if (o1[0] == o2[0]) return Integer.compare(o1[1], o2[1]);
+            else return Integer.compare(o1[0], o2[0]);
         });
     }
 

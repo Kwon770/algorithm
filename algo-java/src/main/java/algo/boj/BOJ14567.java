@@ -1,8 +1,6 @@
-package algo.boj.위상정렬;
+package algo.boj;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * https://www.acmicpc.net/problem/14567

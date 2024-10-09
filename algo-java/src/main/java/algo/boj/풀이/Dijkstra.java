@@ -1,4 +1,4 @@
-package algo.boj;
+package algo.boj.풀이;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
