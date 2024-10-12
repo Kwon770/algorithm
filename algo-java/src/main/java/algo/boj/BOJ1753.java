@@ -1,12 +1,9 @@
-package algo;
+package algo.boj;
 
-import java.lang.*;
 import java.util.*;
 
-/**
- */
+public class BOJ1753 {
 
-public class Main {
     static class Node {
         int dist;
         int n;
@@ -49,7 +46,7 @@ public class Main {
         });
         minHeap.add(new Node(0, K));
 
-        while(!minHeap.isEmpty()) {
+        while (!minHeap.isEmpty()) {
             int node = minHeap.remove().n;
             if (visited[node]) {
                 continue;
