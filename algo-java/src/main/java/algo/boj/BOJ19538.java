@@ -1,14 +1,10 @@
-package algo;
+package algo.boj;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.lang.*;
 import java.util.*;
 
-/**
- */
-
-public class Main {
+public class BOJ19538 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
