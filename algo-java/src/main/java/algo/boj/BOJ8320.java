@@ -1,13 +1,9 @@
-package algo;
+package algo.boj;
 
 import java.lang.*;
 import java.util.*;
 
-/**
- */
-
-public class Main {
-
+public class BOJ8320 {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
