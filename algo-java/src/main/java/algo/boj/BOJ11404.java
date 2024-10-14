@@ -1,14 +1,10 @@
-package algo;
+package algo.boj;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.lang.*;
-import java.util.*;
+import java.util.StringTokenizer;
 
-/**
- */
-
-public class Main {
+public class BOJ11404 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         long INF = 20000000000L;
