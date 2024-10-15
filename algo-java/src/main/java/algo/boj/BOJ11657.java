@@ -1,14 +1,13 @@
-package algo;
+package algo.boj;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.lang.*;
-import java.util.*;
+import algo.Main;
 
-/**
- */
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
-public class Main {
+public class BOJ11657 {
     static class Bus {
         int from;
         int to;
